@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-extension View {
+public extension View {
     /// Wraps the SwiftUI `View` in a `UIHostingController`.
     ///
     /// This is useful when you want to present a SwiftUI view from UIKit code.

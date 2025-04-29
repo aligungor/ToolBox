@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 /// A convenience extension to easily embed any `UIView` in SwiftUI.
-extension UIView {
+public extension UIView {
     
     /// Wraps this `UIView` in a SwiftUI-compatible view.
     ///

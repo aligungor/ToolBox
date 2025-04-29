@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 /// A convenience extension to easily embed any `UIViewController` in SwiftUI.
-extension UIViewController {
+public extension UIViewController {
     
     /// Wraps this `UIViewController` in a SwiftUI-compatible view.
     ///

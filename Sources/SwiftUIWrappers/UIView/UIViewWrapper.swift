@@ -16,7 +16,7 @@ import UIKit
 /// ```swift
 /// MyCustomView().asSwiftUIView()
 /// ```
-struct UIViewWrapper<V: UIView>: UIViewRepresentable {
+public struct UIViewWrapper<V: UIView>: UIViewRepresentable {
     
     /// A closure that creates the `UIView` instance.
     private let makeView: () -> V
@@ -32,7 +32,7 @@ struct UIViewWrapper<V: UIView>: UIViewRepresentable {
     ///
     /// - Parameter context: Context provided by SwiftUI.
     /// - Returns: A newly created `UIView` instance.
-    func makeUIView(context: Context) -> V {
+    public func makeUIView(context: Context) -> V {
         return makeView()
     }
 
@@ -41,7 +41,7 @@ struct UIViewWrapper<V: UIView>: UIViewRepresentable {
     /// - Parameters:
     ///   - uiView: The view to update.
     ///   - context: Context provided by SwiftUI.
-    func updateUIView(_ uiView: V, context: Context) {
+    public func updateUIView(_ uiView: V, context: Context) {
         // No update logic by default.
     }
 }

@@ -16,7 +16,7 @@ import UIKit
 /// ```swift
 /// MyViewController().asSwiftUIView()
 /// ```
-struct UIViewControllerWrapper<VC: UIViewController>: UIViewControllerRepresentable {
+public struct UIViewControllerWrapper<VC: UIViewController>: UIViewControllerRepresentable {
     
     /// A closure that creates the `UIViewController` instance.
     private let makeViewController: () -> VC
@@ -32,7 +32,7 @@ struct UIViewControllerWrapper<VC: UIViewController>: UIViewControllerRepresenta
     ///
     /// - Parameter context: Context provided by SwiftUI.
     /// - Returns: A newly created `UIViewController` instance.
-    func makeUIViewController(context: Context) -> VC {
+    public func makeUIViewController(context: Context) -> VC {
         return makeViewController()
     }
 
@@ -41,7 +41,7 @@ struct UIViewControllerWrapper<VC: UIViewController>: UIViewControllerRepresenta
     /// - Parameters:
     ///   - uiViewController: The view controller to update.
     ///   - context: Context provided by SwiftUI.
-    func updateUIViewController(_ uiViewController: VC, context: Context) {
+    public func updateUIViewController(_ uiViewController: VC, context: Context) {
         // No update logic by default.
     }
 }
