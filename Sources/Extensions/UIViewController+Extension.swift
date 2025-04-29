@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIViewController {
-    func inUINavigationController() -> UINavigationController {
+    func inNavigationController() -> UINavigationController {
         return UINavigationController(rootViewController: self)
     }
     
