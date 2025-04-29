@@ -1,11 +1,11 @@
 import UIKit
 
-public extension UIViewController {
-    func inUINavigationController() -> UINavigationController {
+extension UIViewController {
+    public func inUINavigationController() -> UINavigationController {
         return UINavigationController(rootViewController: self)
     }
     
-    func showAlert(
+    public func showAlert(
         title: String? = nil,
         message: String? = nil,
         animated: Bool = true
